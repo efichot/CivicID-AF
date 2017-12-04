@@ -1,1 +1,1 @@
-web: node src/config/express.js
+web: node index.js

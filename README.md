@@ -1,41 +1,39 @@
-# Starting point for a new Node.js Restful Api
+# node-js-getting-started
 
-## How to use ?
+A barebones Node.js app using [Express 4](http://expressjs.com/).
 
-#### Clone the project and install dependencies
+This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
-```
-git clone git@github.com:efichot/Boilerplate-Swiss-knives API
-cd API
-yarn install
-```
+## Running Locally
 
-#### Development mode
+Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
-```
-yarn start
-```
-
-#### Tests mode
-
-```
-yarn test
+```sh
+$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
+$ cd node-js-getting-started
+$ npm install
+$ npm start
 ```
 
-Follow the `test/main.spec.js` guidelines to write your own tests.
+Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-#### Production mode
+## Deploying to Heroku
 
 ```
-yarn build
-yarn production
+$ heroku create
+$ git push heroku master
+$ heroku open
 ```
+or
 
-##### Why ?
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-This is a simple starter boilerplate to avoid to configure the same things each time you start a new project.
+## Documentation
 
-##### How it works ?
+For more information about using Node.js on Heroku, see these Dev Center articles:
 
-All the important files are in the `src` folder. The Express and Mongoose configuration files are in `src/config` folder. Each time you want to add a new route to your Api, you can call your mongoose schema, callback you controller and make the logic from an helper.
-Use de `.env` file to store your important informations such as your server port, your mongo password, or maybe an OAuth key...
+- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
+- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
+- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)

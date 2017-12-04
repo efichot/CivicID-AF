@@ -1,4 +1,3 @@
-import Joi from 'joi'
 import _ from 'lodash'
 
 const validate = (schema, key = 'query') => (req, res, next) => {

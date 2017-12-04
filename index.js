@@ -10,8 +10,8 @@ express()
 
   .get('/', (req, res) => res.render('pages/index'))
   .post('/sendtoken', (req, res) => {
-    const { token } = res.body;
-    console.log("Tkoen --> " + token);
+    const { token } = req.body;
+    console.log("Token --> " + token);
   })
 
 

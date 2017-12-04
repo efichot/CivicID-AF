@@ -23,6 +23,11 @@ $('button.js-signup').click(function(event) {
     // Your function to pass JWT token to your server
     console.log(jwtToken);
 
+    $.post("/sendtoken", { token: jwtToken }).done((data) => {
+        if (data.done == 'success') {
+            $('button.js-signup').html('Success');
+        }
+    });
     // const civicClient = civicSip.newClient({ appId: 'HJ4qmqtgz',
     // prvKey: "cb8ad58a68020421016942d8a261c7b4c83f9bfef288bb45b5c06f75c21bf4ed",
     // appSecret: "9b169c65be197fde8069366f9fc36bf7" });

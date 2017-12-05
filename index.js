@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const path = require('path')
 const PORT = process.env.PORT || 5000
-const civicSip = require('civic-sip-app');
+const civicSip = require('civic-sip-api');
 
 const app = express();
   app

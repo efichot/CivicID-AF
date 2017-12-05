@@ -23,7 +23,7 @@ $('button.js-signup').click(function(event) {
     // console.log(jwtToken);
     $.post("/sendtoken", { token: jwtToken }).done((data) => {
         if (data.done == 'success') {
-            $('button.js-signup').html('Success you are connected');
+            $('button.js-signup').html(`Success you are connected, welcome`);
             console.log(data.user, null, 4);
         }
     });

@@ -13,7 +13,10 @@ const app = express();
 
 
   app.get('/', (req, res) => res.render('pages/index'));
-  app.post('/', (req, res) => res.send(`token received ${req.body.token}`));
+  app.post('/sendtoken', (req, res) => {
+    console.log(req.body);
+    res.send(`token received ${req.body.token}`);
+  })
 
 
   app.listen(PORT, () => console.log(`Listening on ${ PORT }`))

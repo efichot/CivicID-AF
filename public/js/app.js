@@ -19,7 +19,6 @@ $('button.js-signup').click(function(event) {
 
     // encoded JWT Token is sent to the server
     const jwtToken = event.response;
-
     // Your function to pass JWT token to your server
     console.log(jwtToken);
 
@@ -27,6 +26,8 @@ $('button.js-signup').click(function(event) {
         if (data.done == 'success') {
             $('button.js-signup').html('Success');
         }
+    });
+    
     });
  
   civicSip.on('user-cancelled', function (event) {
@@ -43,4 +44,4 @@ $('button.js-signup').click(function(event) {
       // handle error display if necessary.
       console.log('   Error type = ' + error.type);
       console.log('   Error message = ' + error.message);
-   });
+   })

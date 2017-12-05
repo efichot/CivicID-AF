@@ -8,7 +8,7 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
 
-  .use('/', router);
+  .use('/', router)
   
 
 

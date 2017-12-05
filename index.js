@@ -53,14 +53,16 @@ const app = express();
                 "userId": "36a59d10-6c53-17f6-9185-gthyte22647a"
             }
         */
+
+    res.send({
+      done: 'success',
+      user: JSON.stringify(userData),
+      token
+    });
     }).catch(function(error) {
 
     });
 
-    res.send({
-      done: 'success',
-      token
-    });
   })
 
 

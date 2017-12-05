@@ -57,10 +57,10 @@ const app = express();
 
     });
 
-    // res.send({
-    //   done: 'success',
-    //   token
-    // });
+    res.send({
+      done: 'success',
+      token
+    });
   })
 
 

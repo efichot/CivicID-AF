@@ -14,6 +14,7 @@ const app = express();
   app.post('/sendtoken', (req, res) => {
     const { token } = req.body;
     console.log("Token --> " + token);
+    res.send('token received!' + token);
   });
 
 

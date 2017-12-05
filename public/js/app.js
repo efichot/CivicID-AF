@@ -27,7 +27,7 @@ $('button.js-signup').click(function(event) {
             $('button.js-signup').html('Success');
         }
     });
-    
+
     });
  
   civicSip.on('user-cancelled', function (event) {

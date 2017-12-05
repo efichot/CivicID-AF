@@ -25,7 +25,7 @@ $('button.js-signup').click(function(event) {
         if (data.done == 'success') {
             const dataUser = JSON.parse(data.user);
             console.log(dataUser);
-            $('button.js-signup').html(`Success you are connected, welcome ${data.user.data[0].value}`);
+            $('button.js-signup').html(`Success you are connected, welcome ${dataUser.data[0].value}`);
         }
     });
 

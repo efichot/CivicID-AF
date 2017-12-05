@@ -15,7 +15,7 @@ const app = express();
 
   app.get('/', (req, res) => res.render('pages/index'));
   app.post('/sendtoken', (req, res) => {
-    const { token } = req.body.token;
+    const { token } = req.body;
 
     // Step 4: Initialize instance passing your appId and secret.
     const civicClient = civicSip.newClient({ appId: 'HJ4qmqtgz',

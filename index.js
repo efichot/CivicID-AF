@@ -10,6 +10,7 @@ const app = express();
 
 
   app.get('/', (req, res) => res.render('pages/index'));
+  app.post('/', (req, res) => res.send('post rq  from homepage!'))
   app.post('/sendtoken', (req, res) => {
     const { token } = req.body;
     console.log("Token --> " + token);

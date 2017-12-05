@@ -23,7 +23,7 @@ const app = express();
                                               appSecret: '9b169c65be197fde8069366f9fc36bf7' });
     // Step 5: Exchange authorization code for user data.
 
-    civicClient.exchangeCode(jwtToken)
+    civicClient.exchangeCode(token)
     .then(function(userData) {
         // store user data and userId as appropriate
         console.log("userData = " + JSON.stringify(userData));
@@ -57,10 +57,10 @@ const app = express();
 
     });
 
-    res.send({
-      done: 'success',
-      token
-    });
+    // res.send({
+    //   done: 'success',
+    //   token
+    // });
   })
 
 

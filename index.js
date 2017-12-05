@@ -9,11 +9,11 @@ const app = express();
   .set('view engine', 'ejs')
 
 
-  app.get('/', (req, res) => res.render('pages/index'))
+  app.get('/', (req, res) => res.render('pages/index'));
   app.post('/sendtoken', (req, res) => {
     const { token } = req.body;
     console.log("Token --> " + token);
-  })
+  });
 
 
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+  app.listen(PORT, () => console.log(`Listening on ${ PORT }`))

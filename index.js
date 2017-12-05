@@ -15,7 +15,10 @@ const app = express();
   app.get('/', (req, res) => res.render('pages/index'));
   app.post('/sendtoken', (req, res) => {
     console.log(req.body);
-    res.send(`token received ${req.body.token}`);
+    res.send({
+      done: 'success',
+      token: req.body.token
+    });
   })
 
 

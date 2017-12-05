@@ -20,11 +20,11 @@ $('button.js-signup').click(function(event) {
     // encoded JWT Token is sent to the server
     const jwtToken = event.response;
     // Your function to pass JWT token to your server
-    console.log(jwtToken);
-
+    // console.log(jwtToken);
     $.post("/sendtoken", { token: jwtToken }).done((data) => {
         if (data.done == 'success') {
-            $('button.js-signup').html('Success');
+            $('button.js-signup').html('Success you are connected');
+            console.log(token);
         }
     });
 

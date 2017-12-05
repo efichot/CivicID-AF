@@ -24,7 +24,7 @@ $('button.js-signup').click(function(event) {
     $.post("/sendtoken", { token: jwtToken }).done((data) => {
         if (data.done == 'success') {
             $('button.js-signup').html('Success you are connected');
-            console.log(token);
+            console.log(data.token);
         }
     });
 
